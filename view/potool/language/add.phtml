@@ -1,0 +1,10 @@
+<?php echo $this->navigation('local_navigation')->menu()->setUlClass('nav nav-pills'); ?>
+<h2><?php echo sprintf($this->translate('Add language for module "%s"'), $module)?></h2>
+<?if($error):?>
+    <div class="text-error"><?=$this->translate($error)?></div>
+<?endif?>
+<?=$this->form()->openTag($form)?>
+
+<?=$this->formCollection($form)?>
+
+<?=$this->form()->closeTag()?>

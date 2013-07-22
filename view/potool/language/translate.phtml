@@ -1,0 +1,74 @@
+<?php $this->headStyle()->captureStart() ?>
+.phrases textarea{
+    width: 90%;
+}
+<?php $this->headStyle()->captureEnd() ?>
+<?php echo $this->navigation('local_navigation')->menu()->setUlClass('nav nav-pills'); ?>
+<h2>Translate language <?=$language?> of module <?=$module?></h2>
+<?if($error):?>
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?=$error?>
+    </div>
+<?endif?>
+<form action="" method="post">
+    <table class="table phrases">
+        <tr>
+            <th>№</th>
+            <th><?php echo $this->translate('Original string')?></th>
+            <th><?php echo $this->translate('Translation')?></th>
+            <th><?php echo $this->translate('Additional')?></th>
+        </tr>
+        <?
+        if (count($entries)):
+            $j = 0;
+            foreach ($entries as $i=>$entry):?>
+                <?if(!$entry->msgid) continue; $j++?>
+                <tr <?if (!$entry->msgstr) echo 'class="info"'?>>
+                    <td><?=$j?></td>
+                    <td><?=$this->escapeHtml($entry->msgid)?></td>
+                    <td><textarea name="entry[<?=$i?>][msgstr]" tabindex="<?=$j?>"><?=$this->escapeHtml($entry->msgstr)?></textarea></td>
+                    <td>
+
+                        <?/*if(count($entry->getReferences())):?>
+                            <ul>
+                                <?foreach ($entry->getReferences() as $reference):?>
+                                    <li><?=$reference?></li>
+                                <?endforeach?>
+                            </ul>
+                        <?endif*/?>
+                        <div class="comments">
+                            <textarea name="entry[<?=$i?>][comments]"><?=$this->escapeHtml($entry->comments)?></textarea>
+                        </div>
+
+                        <div class="additions">
+                            <input type="hidden" name="entry[<?=$i?>][delete]" value="0" />
+                            <input type="hidden" name="entry[<?=$i?>][hash]" value="<?=$entry->getHash()?>" />
+                            <input type="hidden" name="entry[<?=$i?>][msgid]" value="<?=$this->escapeHtmlAttr($entry->msgid)?>" />
+                            <input type="hidden" name="entry[<?=$i?>][fuzzy]" value="0" />
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="entry[<?=$i?>][fuzzy]" value="1"
+                                    <?if($entry->getFuzzy()) echo ' checked="checked" '?>
+                                />
+                                <?if($entry->getFuzzy()):?>
+                                    <span class="label label-warning">Fuzzy</span>
+                                <?else:?>
+                                    Fuzzy
+                                <?endif?>
+
+                            </label>
+                            <label class="checkbox inline"><input disabled="true" type="checkbox" name="entry[<?=$i?>][delete]" value="1" /> <?php echo $this->translate('Delete')?></label>
+                        </div>
+                    </td>
+                </tr>
+
+            <?endforeach?>
+        <?else:?>
+            <tr>
+                <td colspan="4"><?=$this->translate('There are no entries for translate. Use "Update" option')?></td>
+            </tr>
+        <?endif?>
+
+    </table>
+    <input type="submit" class="btn" value="<?php echo $this->translate('Go')?>" />
+</form>

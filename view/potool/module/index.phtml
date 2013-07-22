@@ -1,0 +1,30 @@
+<?php if(count($modules)):?>
+    <h2><?=$this->translate('Module list')?></h2>
+    <table class="table">
+        <tr>
+            <th><?=$this->translate('Module name')?></th>
+            <th><?=$this->translate('Writable')?></th>
+            <th><?=$this->translate('Actions')?></th>
+        </tr>
+        <?php foreach($modules as $module):?>
+            <tr>
+                <td><?php echo $module?></td>
+                <td>
+                    <?php if($module->isWritable()):?>
+                        Yes
+                    <?php else:?>
+                        No <a href="<?php echo $this->url("potool", array('action'=>'permissions', 'id'=>(string)$module))?>" target="_blank">[<?=$this->translate('How to fix')?>]</a>
+                    <?php endif;?>
+                </td>
+                <td>
+                    <a href="<?php echo $this->url('potool', array('controller'=>'language', 'action'=>'index', 'id'=>(string)$module))?>">[<?=$this->translate('Show')?>]</a>
+                    <? if($module->isWritable()):?>
+                        <a href="<?=$this->url('potool', array('controller'=>'module', 'action'=>'upgrade', 'id'=>(string)$module))?>">[<?=$this->translate('Upgrade')?>]</a>
+                        <a href="<?=$this->url('potool', array('controller'=>'module', 'action'=>'compile', 'id'=>(string)$module))?>">[<?=$this->translate('Compile')?>]</a>
+                    <?endif?>
+                </td>
+            </tr>
+
+        <?php endforeach?>
+    </table>
+<?endif?>

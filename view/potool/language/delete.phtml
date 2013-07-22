@@ -1,0 +1,8 @@
+<?php echo sprintf($this->translate('Do you really want to delete language %s of module %s?'), $language, $module) ?>
+
+<form action="<?=$this->url('potool', array('controller'=>'language', 'action'=>'delete', 'id'=>$module->getName(), 'language'=>$language->getName()))?>" method="post">
+        <input type="hidden" name="module" value="<?=$module?>" />
+        <input type="hidden" name="module" value="<?=$language?>" />
+        <input type="checkbox" name="answer" value="1" /> <?php echo $this->translate('Yes')?>
+        <input type="submit" name="del" value="<?php echo $this->translate('Send')?>" />
+</form>

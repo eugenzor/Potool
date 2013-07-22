@@ -1,0 +1,8 @@
+<?php echo sprintf($this->translate('To fix this problem set permissions <strong>777</strong> to folder <strong>%s</strong>
+and permissions <strong>666</strong> to po files in that folder
+or execute:'), $module->getLanguageDir()) ?>
+<pre>
+chmod 777 <?=$module->getLanguageDir()?>
+
+chmod 666 <?=$module->getLanguageDir()?>/*.po
+</pre>

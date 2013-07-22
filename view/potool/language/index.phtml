@@ -1,0 +1,34 @@
+<?php echo $this->navigation('local_navigation')->menu()->setUlClass('nav nav-pills'); ?>
+<?php echo $this->flashMessage()?>
+
+<?php if(count($languages)):?>
+    <h2><?=sprintf($this->translate('Languages of module "%s"'), $module)?>:</h2>
+    <table class="table">
+        <tr>
+            <th><?php echo $this->translate('Language')?></th>
+            <th><?php echo $this->translate('Po updated')?></th>
+            <th><?php echo $this->translate('Mo updated')?></th>
+            <th><?php echo $this->translate('Actions')?></th>
+        </tr>
+            <?php foreach($languages as $language):?>
+                <tr>
+                    <td><?=$language?></td>
+                    <td><?=$language->getPoDate()->format('Y-m-d H:i:s')?></td>
+                    <td>
+                        <?if($language->hasMo()):?>
+                            <?=$language->getMoDate()->format('Y-m-d H:i:s')?>
+                        <?endif?>
+                    </td>
+                    <td>
+                        <a href="<?php echo $this->url('potool', array('controller'=>'language', 'action'=>'translate', 'id'=>$module->getName(), 'language'=>(string)$language))?>">[<?php echo $this->translate('Translate')?>]</a>
+                        <a href="<?php echo $this->url('potool', array('controller'=>'language', 'action'=>'upgrade', 'id'=>$module->getName(), 'language'=>(string)$language))?>">[<?php echo $this->translate('Upgrade')?>]</a>
+                        <a href="<?php echo $this->url('potool', array('controller'=>'language', 'action'=>'compile', 'id'=>$module->getName(), 'language'=>(string)$language))?>">[<?php echo $this->translate('Compile')?>]</a>
+                        <a href="<?php echo $this->url('potool', array('controller'=>'language', 'action'=>'delete', 'id'=>$module->getName(), 'language'=>(string)$language))?>">[<?php echo $this->translate('Delete')?>]</a>
+                    </td>
+                </tr>
+            <?php endforeach?>
+        </tbody>
+    </table>
+<?php else:?>
+    <h2><?php echo sprintf($this->translate('Module "%s" has no languages'), $module)?></h2>
+<?endif?>
