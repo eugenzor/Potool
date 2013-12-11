@@ -38,7 +38,6 @@ return array(
                 ),
 
             ),
-
         ),
     ),
 
@@ -104,7 +103,8 @@ return array(
                 'label' => 'Potool',
                 'route' => 'potool',
                 'controller' => 'Module',
-                'action' => 'index'
+                'action' => 'index',
+                'resource' => 'route/potool'
             )
         ),
 
