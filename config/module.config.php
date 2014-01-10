@@ -98,7 +98,7 @@ return array(
 
 
     'navigation' => array(
-        'admin' => array(
+        'admina' => array(
             'potool' => array(
                 'label' => 'Potool',
                 'route' => 'potool',
