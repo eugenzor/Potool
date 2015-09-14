@@ -1,7 +1,7 @@
 {
     "name":        "eugenzor/potool",
     "description": "Zend Framework 2 Module for edition and compiling gettext files",
-    "type":        "zf2 module",
+    "type":        "zf2-module",
     "license":     "BSD-3-Clause",
     "keywords": [
         "gettext",
