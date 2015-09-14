@@ -1,0 +1,35 @@
+{
+    "name":        "eugenzor/potool",
+    "description": "Zend Framework 2 Module for edition and compiling gettext files",
+    "type":        "zf2 module",
+    "license":     "BSD-3-Clause",
+    "keywords": [
+        "gettext",
+        "po",
+        "mo",
+        "internationalization",
+        "module",
+        "zf2",
+        "Zend Framework"
+    ],
+    
+    "authors": [{
+        "name": "Eugene Galenko"
+    }],
+
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*@stable"
+    },
+        "suggest": {
+        "bjyoungblood/bjy-authorize": "Access control to protect Potool against unauthorized users"
+    },
+    "autoload": {
+        "psr-0": {
+            "Potool": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
