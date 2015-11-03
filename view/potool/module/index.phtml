@@ -18,13 +18,13 @@
                 </td>
                 <td>
                     <a href="<?php echo $this->url('potool', array('controller'=>'language', 'action'=>'index', 'id'=>(string)$module))?>">[<?=$this->translate('Show')?>]</a>
-                    <? if($module->isWritable()):?>
+                    <?php if($module->isWritable()):?>
                         <a href="<?=$this->url('potool', array('controller'=>'module', 'action'=>'upgrade', 'id'=>(string)$module))?>">[<?=$this->translate('Upgrade')?>]</a>
                         <a href="<?=$this->url('potool', array('controller'=>'module', 'action'=>'compile', 'id'=>(string)$module))?>">[<?=$this->translate('Compile')?>]</a>
-                    <?endif?>
+                    <?php endif?>
                 </td>
             </tr>
 
         <?php endforeach?>
     </table>
-<?endif?>
+<?php endif?>

@@ -15,9 +15,9 @@
                     <td><?=$language?></td>
                     <td><?=$language->getPoDate()->format('Y-m-d H:i:s')?></td>
                     <td>
-                        <?if($language->hasMo()):?>
+                        <?php if($language->hasMo()):?>
                             <?=$language->getMoDate()->format('Y-m-d H:i:s')?>
-                        <?endif?>
+                        <?php endif?>
                     </td>
                     <td>
                         <a href="<?php echo $this->url('potool', array('controller'=>'language', 'action'=>'translate', 'id'=>$module->getName(), 'language'=>(string)$language))?>">[<?php echo $this->translate('Translate')?>]</a>
@@ -31,4 +31,4 @@
     </table>
 <?php else:?>
     <h2><?php echo sprintf($this->translate('Module "%s" has no languages'), $module)?></h2>
-<?endif?>
+<?php endif?>

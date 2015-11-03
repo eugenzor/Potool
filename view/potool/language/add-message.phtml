@@ -1,12 +1,12 @@
 <?php echo $this->navigation('local_navigation')->menu()->setUlClass('nav nav-pills'); ?>
 <h2><?php echo sprintf($this->translate('New message id for module "%s"'), $module)?></h2>
 <?php echo $this->flashMessage();?>
-<?if($error):?>
+<?php if($error):?>
 <div class="alert alert-error">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <?=$error?>
 </div>
-<?endif?>
+<?php endif?>
 <form action="" method="post">
     <input type="hidden" name="module" value="<?=$this->escapeHtmlAttr($module)?>" />
     <textarea name="key"></textarea>
