@@ -3,6 +3,12 @@
     width: 90%;
 }
 <?php $this->headStyle()->captureEnd() ?>
+
+<?php $this->headScript()->captureStart()?>
+function deleteTranslation(messageId){
+    document.getElementById(messageId).value='';
+}
+<?php $this->headScript()->captureEnd()?>
 <?php echo $this->navigation('local_navigation')->menu()->setUlClass('nav nav-pills'); ?>
 <h2>Translate language <?=$language?> of module <?=$module?></h2>
 <?php if($error):?>
@@ -15,8 +21,8 @@
     <table class="table phrases">
         <tr>
             <th>№</th>
-            <th><?php echo $this->translate('Original string')?></th>
-            <th><?php echo $this->translate('Translation')?></th>
+            <th width="45%"><?php echo $this->translate('Original string')?></th>
+            <th width="40%"><?php echo $this->translate('Translation')?></th>
             <th><?php echo $this->translate('Additional')?></th>
         </tr>
         <?php
@@ -27,7 +33,7 @@
                 <tr <?php if (!$entry->msgstr) echo 'class="info"'?>>
                     <td><?php echo $j?></td>
                     <td><?php echo $this->escapeHtml($entry->msgid)?></td>
-                    <td><textarea name="entry[<?php echo $i?>][msgstr]" tabindex="<?php echo $j?>"><?php echo $this->escapeHtml($entry->msgstr)?></textarea></td>
+                    <td><textarea id="translation-<?php echo $i?>" name="entry[<?php echo $i?>][msgstr]" tabindex="<?php echo $j?>"  class="form-control"><?php echo $this->escapeHtml($entry->msgstr)?></textarea></td>
                     <td>
 
                         <?php /*if(count($entry->getReferences())):?>
@@ -38,15 +44,14 @@
                             </ul>
                         <?php endif*/?>
                         <div class="comments">
-                            <textarea name="entry[<?php echo $i?>][comments]"><?php echo $this->escapeHtml($entry->comments)?></textarea>
+                            <textarea name="entry[<?php echo $i?>][comments]"  class="form-control"><?php echo $this->escapeHtml($entry->comments)?></textarea>
                         </div>
 
-                        <div class="additions">
-                            <input type="hidden" name="entry[<?php echo $i?>][delete]" value="0" />
+                        <div class="additions form-inline">
                             <input type="hidden" name="entry[<?php echo $i?>][hash]" value="<?php echo $entry->getHash()?>" />
                             <input type="hidden" name="entry[<?php echo $i?>][msgid]" value="<?php echo $this->escapeHtmlAttr($entry->msgid)?>" />
                             <input type="hidden" name="entry[<?php echo $i?>][fuzzy]" value="0" />
-                            <label class="checkbox inline">
+                            <label class="checkbox-inline">
                                 <input type="checkbox" name="entry[<?php echo $i?>][fuzzy]" value="1"
                                     <?php if($entry->getFuzzy()) echo ' checked="checked" '?>
                                 />
@@ -57,7 +62,14 @@
                                 <?php endif?>
 
                             </label>
-                            <label class="checkbox inline"><input disabled="true" type="checkbox" name="entry[<?php echo $i?>][delete]" value="1" /> <?php echo $this->translate('Delete')?></label>
+                            <label class="checkbox inline">
+                                <input  
+                                    type="button"   
+                                    class="btn btn-default  btn-xs" 
+                                    onclick="deleteTranslation('translation-<?php echo $i?>')"
+                                    name="entry[<?php echo $i?>][delete]" 
+                                    value="<?php echo $this->translate('Delete')?>" /> 
+                            </label>
                         </div>
                     </td>
                 </tr>

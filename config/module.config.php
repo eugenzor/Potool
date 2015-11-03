@@ -97,7 +97,7 @@ return array(
 
 
     'navigation' => array(
-        'admina' => array(
+        'admin' => array(
             'potool' => array(
                 'label' => 'Potool',
                 'route' => 'potool',
@@ -119,31 +119,37 @@ return array(
                 'label' => 'Languages',
                 'route' => 'potool',
                 'controller' => 'Language',
-                'action' => 'index'
+                'action' => 'index',
+                'reset_params' => false,
+                'use_route_match' => true,
             ),
             'upgrade' => array(
                 'label' => 'Upgrade',
                 'route' => 'potool',
                 'controller' => 'Module',
-                'action' => 'upgrade'
+                'action' => 'upgrade',
+                'use_route_match' => true,
             ),
             'compile' => array(
                 'label' => 'Compile',
                 'route' =>'potool',
                 'controller' => 'Module',
-                'action' => 'compile'
+                'action' => 'compile',
+                'use_route_match' => true,
             ),
             'add-language' => array(
                 'label' => 'Add language',
                 'route' => 'potool',
                 'controller' => 'Language',
-                'action' => 'add'
+                'action' => 'add',
+                'use_route_match' => true,
             ),
             'add-message' => array(
                 'label' => 'Add message key',
                 'route' => 'potool',
                 'controller' => 'Language',
-                'action' => 'add-message'
+                'action' => 'add-message',
+                'use_route_match' => true,
             )
 
         )
