@@ -11,11 +11,12 @@ Here you can work with all internationalization files of certain module. If you 
 When you translate new keys or edit translated you have to recompile MO files by pressing "Compile" button. After that new translation will be available im your application.
 
 When you press "Show" button you get to "Languages interface": 
+![Languages interface](https://raw.githubusercontent.com/eugenzor/Potool/master/docs/images/potool_languages.png)
 
 There you can upgrede keys from your project, recompile them. Also you can new language file and  add a new message key for all languages.
 
 If you have to translate any of PO files you have to press "Translate" button on certain language. After that you can see "Translation interface":
-
+![Translation interface](https://raw.githubusercontent.com/eugenzor/Potool/master/docs/images/potool_translation.png)
 Here you can edit translation phrases. Also you if you have any doubts can mark translation phrase as "Fuzzy". Phrases marked as fuzzy don't appear on you application.
 
 
