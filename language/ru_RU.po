@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Potool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-03 18:23+0200\n"
+"POT-Creation-Date: 2015-11-07 11:40+0200\n"
 "PO-Revision-Date: 2013-04-17 10:13+0300\n"
 "Last-Translator: Eugene <eugene.galenko@gmid.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/permissions.phtml:1
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/permissions.phtml:1
 #, php-format
 msgid ""
 "To fix this problem set permissions <strong>777</strong> to folder <strong>"
@@ -23,237 +23,237 @@ msgstr ""
 "папку <strong>%s</strong> и права <strong>666</strong> на языковые файлы po "
 "в ней или выполнить:"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:2
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:2
 msgid "Module list"
 msgstr "Список модулей"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:5
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:5
 msgid "Module name"
 msgstr "Название модуля"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:6
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:6
 msgid "Writable"
 msgstr "Доступен на запись"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:7
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:11
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:7
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:11
 msgid "Actions"
 msgstr "Действия"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:16
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:16
 msgid "How to fix"
 msgstr "Как поправить"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:20
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:20
 msgid "Show"
 msgstr "Показать"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:22
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:24
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:22
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:24
 msgid "Upgrade"
 msgstr "Обновить"
 
-#: /var/www/sceleton/module/Potool/view/potool/module/index.phtml:23
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:25
+#: /var/www/upwork-analyzer/module/Potool/view/potool/module/index.phtml:23
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:25
 msgid "Compile"
 msgstr "Компилировать"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/add-message.phtml:2
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/add-message.phtml:2
 #, php-format
 msgid "New message id for module \"%s\""
 msgstr "Новый фразовый ключ для модуля \"%s\""
 
-#: /var/www/sceleton/module/Potool/view/potool/language/add-message.phtml:14
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/add-message.phtml:14
 msgid "Add and exit"
 msgstr "Добавить и выйти"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/add-message.phtml:15
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/add-message.phtml:15
 msgid "Add and continue"
 msgstr "Добавить и продолжить"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/add.phtml:2
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/add.phtml:2
 #, php-format
 msgid "Add language for module \"%s\""
 msgstr "Добавить язык для модуля \"%s\""
 
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:5
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:5
 #, php-format
 msgid "Languages of module \"%s\""
 msgstr "Языки модуля \"%s\""
 
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:8
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:8
 msgid "Language"
 msgstr "Языки"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:9
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:9
 msgid "Po updated"
 msgstr "Обновление Po"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:10
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:10
 msgid "Mo updated"
 msgstr "Обновление Mo"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:23
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:23
 msgid "Translate"
 msgstr "Перевести"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:26
-#: /var/www/sceleton/module/Potool/view/potool/language/translate.phtml:71
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:26
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/translate.phtml:71
 msgid "Delete"
 msgstr "Удалить"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/index.phtml:33
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/index.phtml:33
 #, php-format
 msgid "Module \"%s\" has no languages"
 msgstr "У модуля \"%s\" нет языков"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/delete.phtml:1
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/delete.phtml:1
 #, php-format
 msgid "Do you really want to delete language %s of module %s?"
 msgstr "Вы действительно хотите удалить язык \"%s\" модуля \"%s\"?"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/delete.phtml:6
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/delete.phtml:6
 msgid "Yes"
 msgstr "Да"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/delete.phtml:7
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/delete.phtml:7
 msgid "Send"
 msgstr "Отправить"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/translate.phtml:24
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/translate.phtml:24
 msgid "Original string"
 msgstr "Исходная строка"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/translate.phtml:25
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/translate.phtml:25
 msgid "Translation"
 msgstr "Перевод"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/translate.phtml:26
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/translate.phtml:26
 msgid "Additional"
 msgstr "Дополнительно"
 
-#: /var/www/sceleton/module/Potool/view/potool/language/translate.phtml:80
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/translate.phtml:80
 msgid "There are no entries for translate. Use \"Update\" option"
 msgstr ""
 
-#: /var/www/sceleton/module/Potool/view/potool/language/translate.phtml:85
+#: /var/www/upwork-analyzer/module/Potool/view/potool/language/translate.phtml:85
 msgid "Go"
 msgstr "Поехали"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:39
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:39
 #, php-format
 msgid "Language \"%s\" has been successfully added"
 msgstr "Новый язык был успешно добавлен"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:71
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:71
 #, php-format
 msgid "Language \"%s\" was delete"
 msgstr "Языки модуля \"%s\" был успешно удален"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:82
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:94
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:105
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:175
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/ModuleController.php:33
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/ModuleController.php:47
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:82
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:94
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:105
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:175
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/ModuleController.php:33
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/ModuleController.php:47
 #, php-format
 msgid "Language folder of module \"%s\" is not writable"
 msgstr "Языковая папка  модуля \"%s\" не доступна для записи"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:87
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:98
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:87
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:98
 #, php-format
 msgid "Language %s was successfully upgraded"
 msgstr "Язык \"%s\" был успешно обновлен"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:116
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:116
 msgid "Entries not found"
 msgstr "Записи не найдены"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:135
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:135
 msgid "Nothing was updated!"
 msgstr "Ничего не было обновлено!"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:152
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:152
 #, php-format
 msgid "%s translated phrases for language \"%s\" have been saved"
 msgstr "%s переведенных фраз для языка \"%s\" были успешно сохранены"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:184
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:184
 msgid "Message key can not be empty"
 msgstr "Ключ фразы не может быть пустым"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:190
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:190
 #, php-format
 msgid "Key \"%s\" was successfully added and module has been upgraded"
 msgstr "Ключ \"%\" был успешно добавлен и модуль был обновлен"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/LanguageController.php:193
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/LanguageController.php:193
 #, php-format
 msgid "Key \"%s\" was successfully added"
 msgstr "Фразовый ключ \"%\" был успешно добавлен"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/ModuleController.php:36
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/ModuleController.php:36
 msgid "Languages have been upgraded"
 msgstr "Языки были успешно обновлены"
 
-#: /var/www/sceleton/module/Potool/src/Potool/Controller/ModuleController.php:50
+#: /var/www/upwork-analyzer/module/Potool/src/Potool/Controller/ModuleController.php:50
 msgid "Languages have been compiled"
 msgstr "Языки были успешно скомпилированы"
 
-#: /var/www/sceleton/module/Potool/test/data/Module3/language/potool.phtml:1
-#: /var/www/sceleton/module/Potool/test/data/Module1/language/potool.phtml:1
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module3/language/potool.phtml:1
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module1/language/potool.phtml:1
 msgid "January"
 msgstr ""
 
-#: /var/www/sceleton/module/Potool/test/data/Module3/language/potool.phtml:2
-#: /var/www/sceleton/module/Potool/test/data/Module1/language/potool.phtml:2
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module3/language/potool.phtml:2
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module1/language/potool.phtml:2
 msgid "February\"s"
 msgstr ""
 
-#: /var/www/sceleton/module/Potool/test/data/Module3/language/potool.phtml:3
-#: /var/www/sceleton/module/Potool/test/data/Module1/language/potool.phtml:3
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module3/language/potool.phtml:3
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module1/language/potool.phtml:3
 msgid "March's"
 msgstr ""
 
-#: /var/www/sceleton/module/Potool/test/data/Module3/language/potool.phtml:4
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module3/language/potool.phtml:4
 msgid ""
 "April\n"
 "May"
 msgstr ""
 
-#: /var/www/sceleton/module/Potool/test/data/Module2/view/layout/layout.phtml:6
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module2/view/layout/layout.phtml:6
 msgid "Skeleton Application"
 msgstr ""
 
-#: /var/www/sceleton/module/Potool/test/data/Module2/view/layout/layout.phtml:31
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module2/view/layout/layout.phtml:31
 msgid "Home"
 msgstr "Главная"
 
-#: /var/www/sceleton/module/Potool/test/data/Module2/view/layout/layout.phtml:47
+#: /var/www/upwork-analyzer/module/Potool/test/data/Module2/view/layout/layout.phtml:47
 msgid "All rights reserved."
 msgstr "Все права защищены!"
 
-#: /var/www/sceleton/module/Potool/language/potool.phtml:1
+#: /var/www/upwork-analyzer/module/Potool/language/potool.phtml:1
 msgid "Modules"
 msgstr "Модули"
 
-#: /var/www/sceleton/module/Potool/language/potool.phtml:2
+#: /var/www/upwork-analyzer/module/Potool/language/potool.phtml:2
 msgid "Languages"
 msgstr "Языки"
 
-#: /var/www/sceleton/module/Potool/language/potool.phtml:3
+#: /var/www/upwork-analyzer/module/Potool/language/potool.phtml:3
 msgid "Add language"
 msgstr "Добавить язык"
 
-#: /var/www/sceleton/module/Potool/language/potool.phtml:4
+#: /var/www/upwork-analyzer/module/Potool/language/potool.phtml:4
 msgid "Add message key"
 msgstr "Добавить фразовый ключ"
 
-#: /var/www/sceleton/module/Potool/language/potool.phtml:5
+#: /var/www/upwork-analyzer/module/Potool/language/potool.phtml:5
 msgid "Language name"
 msgstr "Язык"
 
-#: /var/www/sceleton/module/Potool/language/potool.phtml:6
+#: /var/www/upwork-analyzer/module/Potool/language/potool.phtml:6
 msgid "Add"
 msgstr "Добавить"
