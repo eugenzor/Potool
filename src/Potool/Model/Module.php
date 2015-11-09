@@ -222,18 +222,22 @@ class Module
      */
     function writeAdditionalFile($phrases)
     {
+        $file = $this->getAdditionalFileName();
+        
+        if (is_file($file)){
+            @unlink($file);
+        }
+        
         if (!count($phrases)){
             return $this;
         }
-        $file = $this->getAdditionalFileName();
+        
         $content = '';
         foreach($phrases as $phrase){
             $phrase = str_replace('"', '\"', $phrase);
             $content .= $this->additionalFileStartDelimiter . $phrase . $this->additionalFileEndDelimiter;
         }
-        if (is_file($file)){
-            @unlink($file);
-        }
+
         $written = @file_put_contents($file, $content);
         if (!$written){
             throw new \Exception("Can not write to file " . $file);

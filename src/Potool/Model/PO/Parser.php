@@ -6,6 +6,7 @@ class Parser{
     public $fileHandle;
     protected $context = array();
     public $entryStore;
+    protected $line_count = 0;
 
     protected $match_expressions = array(
         array(
