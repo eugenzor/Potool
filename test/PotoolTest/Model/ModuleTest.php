@@ -99,7 +99,7 @@ class ModuleTest extends PHPUnit_Framework_TestCase
     function testWritable()
     {
         $module = $this->moduleManager->getModuleByName('Module2');
-        $module->isWritable();
+        $module->isLanguageDirWritable();
     }
 
     function testAdditionalFile()

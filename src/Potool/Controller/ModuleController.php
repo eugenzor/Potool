@@ -29,7 +29,7 @@ class ModuleController extends AbstractController
     function upgradeAction()
     {
         $module = $this->getModuleByParams();
-        if (!$module->isWritable()){
+        if (!$module->isLanguageDirWritable()){
             throw new \Exception(sprintf($this->translate('Language folder of module "%s" is not writable'), $module));
         }
         $module->upgrade();
@@ -43,7 +43,7 @@ class ModuleController extends AbstractController
     function compileAction()
     {
         $module = $this->getModuleByParams();
-        if (!$module->isWritable()){
+        if (!$module->isLanguageDirWritable()){
             throw new \Exception(sprintf($this->translate('Language folder of module "%s" is not writable'), $module));
         }
         $module->compile();

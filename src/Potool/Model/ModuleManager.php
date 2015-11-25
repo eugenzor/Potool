@@ -31,7 +31,7 @@ class ModuleManager
     {
         $dir = $this->getOption('dir');
         if (!$dir){
-            $dir = realpath(__DIR__ . '/../../../..');
+            $dir = realpath('module');
         }
         if (!is_dir($dir)){
             throw new \Exception("Module folder is undefined");

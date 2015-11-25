@@ -1,3 +1,6 @@
+
+
+<?php if ($module->isLanguageDirExists() && !$module->isLanguageDirWritable()):?>
 <?php echo sprintf($this->translate('To fix this problem set permissions <strong>777</strong> to folder <strong>%s</strong>
 and permissions <strong>666</strong> to po files in that folder
 or execute:'), $module->getLanguageDir()) ?>
@@ -6,3 +9,14 @@ chmod 777 <?=$module->getLanguageDir()?>
 
 chmod 666 <?=$module->getLanguageDir()?>/*.po
 </pre>
+<?php endif?>
+
+<?php if (!$module->isLanguageDirExists() && !$module->isModuleDirWritable()):?>
+<?php echo sprintf($this->translate('To fix this problem make folder <strong>%s</strong> and set permissions <strong>777</strong> to po files in that folder
+to it:'), $module->getLanguageDir()) ?>
+<pre>
+mkdir <?=$module->getLanguageDir()?>
+
+chmod 777 <?=$module->getLanguageDir()?>
+</pre>
+<?php endif; ?>

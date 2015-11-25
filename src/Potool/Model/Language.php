@@ -24,11 +24,19 @@ class Language
         if (is_file($fileName)){
             throw new \Exception("Language file $fileName already exists");
         }
-        if (!$module->isWritable()){
-            throw new \Exception("Module language folder $langDir isn't writable");
+        if ($module->isLanguageDirExists()){
+            if (!$module->isLanguageDirWritable()){
+                throw new \Exception("Module language folder $langDir isn't writable");
+            }
+        }else{
+            if ($module->isModuleDirWritable()){
+                mkdir($langDir);
+            }else{
+                throw new \Exception("Module folder {$module->getPath()} isn't writable");
+            }
         }
         touch($fileName);
-        chmod($fileName, 0666);
+//        chmod($fileName, 0666);
         return new Language($module, $name);
     }
 

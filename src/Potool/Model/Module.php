@@ -42,8 +42,12 @@ class Module
      */
     function getLanguageNames()
     {
-        $files = Utils::getFileList($this->getPath() . '/language', array('type'=>'f', 'ext'=>'po'));
-        if (!$files){
+        try{
+            $files = Utils::getFileList($this->getPath() . '/language', array('type'=>'f', 'ext'=>'po'));
+            if (!$files){
+                return array();
+            }
+        }catch(FileListException $e){
             return array();
         }
         $languageNames = array();
@@ -92,7 +96,7 @@ class Module
     function getPath()
     {
         if (!$this->path){
-            $this->path = realpath(__DIR__. '/../../../../' . $this->getName());
+            $this->path = realpath('module/' . $this->getName());
         }
         return $this->path;
     }
@@ -168,13 +172,44 @@ class Module
      * Check if language dir is writable
      * @return bool
      */
+    function isModuleDirWritable()
+    {
+        $moduleDir = $this->getPath();
+        if (!is_dir($moduleDir)){
+            return false;
+        }
+        return is_writable($moduleDir);
+    }
+    
+    /**
+     * Check if language files can be written
+     * @return boolean
+     */
     function isWritable()
+    {
+        if ($this->isLanguageDirWritable()){
+            return true;
+        }else{
+            return $this->isModuleDirWritable();
+        }
+    }
+    
+    /**
+     * Check if language dir is writable
+     * @return bool
+     */
+    function isLanguageDirWritable()
     {
         $langDir = $this->getLanguageDir();
         if (!is_dir($langDir)){
             return false;
         }
         return is_writable($langDir);
+    }
+    
+    function isLanguageDirExists()
+    {
+        return is_dir($this->getLanguageDir());
     }
 
     function getLanguageDir()

@@ -13,7 +13,7 @@ class Utils
     static function getFileList($path, $options=null)
     {
         if(!is_dir($path)){
-            throw new \Exception("Path must be dir");
+            throw new FileListException("Path must be dir");
         }
         $files = array();
         $list = scandir($path);

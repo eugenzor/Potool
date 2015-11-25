@@ -78,7 +78,7 @@ class LanguageController extends AbstractController
     function upgradeAction()
     {
         $module = $this->getModuleByParams();
-        if (!$module->isWritable()){
+        if (!$module->isLanguageDirWritable()){
             throw new \Exception(sprintf($this->translate('Language folder of module "%s" is not writable'), $module));
         }
         $language = $module->getLanguageByName($this->params()->fromRoute('language'));
@@ -90,7 +90,7 @@ class LanguageController extends AbstractController
     function compileAction()
     {
         $module = $this->getModuleByParams();
-        if (!$module->isWritable()){
+        if (!$module->isLanguageDirWritable()){
             throw new \Exception(sprintf($this->translate('Language folder of module "%s" is not writable'), $module));
         }
         $language = $module->getLanguageByName($this->params()->fromRoute('language'));
@@ -101,7 +101,7 @@ class LanguageController extends AbstractController
     function translateAction()
     {
         $module = $this->getModuleByParams();
-        if (!$module->isWritable()){
+        if (!$module->isLanguageDirWritable()){
             throw new \Exception(sprintf($this->translate('Language folder of module "%s" is not writable'), $module));
         }
         $language = $module->getLanguageByName($this->params()->fromRoute('language'));
@@ -171,7 +171,7 @@ class LanguageController extends AbstractController
     function addMessageAction()
     {
         $module = $this->getModuleByParams();
-        if (!$module->isWritable()){
+        if (!$module->isLanguageDirWritable()){
             throw new \Exception(sprintf($this->translate('Language folder of module "%s" is not writable'), $module));
         }
 
