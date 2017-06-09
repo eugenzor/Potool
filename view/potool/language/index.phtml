@@ -4,12 +4,13 @@
 <?php if(count($languages)):?>
     <h2><?=sprintf($this->translate('Languages of module "%s"'), $module)?>:</h2>
     <table class="table">
-        <tr>
-            <th><?php echo $this->translate('Language')?></th>
-            <th><?php echo $this->translate('Po updated')?></th>
-            <th><?php echo $this->translate('Mo updated')?></th>
-            <th><?php echo $this->translate('Actions')?></th>
-        </tr>
+        <tbody>
+            <tr>
+                <th><?php echo $this->translate('Language')?></th>
+                <th><?php echo $this->translate('Po updated')?></th>
+                <th><?php echo $this->translate('Mo updated')?></th>
+                <th><?php echo $this->translate('Actions')?></th>
+            </tr>
             <?php foreach($languages as $language):?>
                 <tr>
                     <td><?=$language?></td>
